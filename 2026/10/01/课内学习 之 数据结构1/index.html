@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>课内学习 之 数据结构1 | 有暗香盈袖</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="课内学习 之 数据结构1 | 有暗香盈袖">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="小珠，是一个对世界充满好奇的人类，对密码学很感兴趣，正在努力学习(^-^)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="https://xiaozhu-jmxs.github.io/about/index.html">
+<meta property="og:site_name" content="有暗香盈袖">
+<meta property="og:description" content="小珠，是一个对世界充满好奇的人类，对密码学很感兴趣，正在努力学习(^-^)">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-09-30T14:30:00.000Z">
+<meta property="article:modified_time" content="2026-09-30T14:57:30.312Z">
+<meta property="article:author" content="小珠">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>小珠</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/xiaozhu-JMXS"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:linda@modico.net"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(2)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="功课">
+            <i class="fold iconfont icon-right"></i>
+            功课
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="功课&lt;---&gt;数据结构">
+            
+            数据结构
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="做题小记">
+            <i class="fold iconfont icon-right"></i>
+            做题小记
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="做题小记&lt;---&gt;buuctf">
+            
+            buuctf
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="2">
+<input type="hidden" id="yelog_site_word_count" value="892">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RSA</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 功课 数据结构 "
+           href="/2026/10/01/%E8%AF%BE%E5%86%85%E5%AD%A6%E4%B9%A0%20%E4%B9%8B%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="课内学习 之 数据结构1">课内学习 之 数据结构1</span>
+            <span class="post-date" title="2026-10-01 15:16:17">2026/10/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 做题小记 buuctf "
+           href="/2026/09/30/buuctf-rsa9/"
+           data-tag="RSA"
+           data-author="" >
+            <span class="post-title" title="buuctf rsa9">buuctf rsa9</span>
+            <span class="post-date" title="2026-09-30 16:13:09">2026/09/30</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-课内学习 之 数据结构1" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">课内学习 之 数据结构1</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="功课">功课</a> > 
+            
+            <a  data-rel="功课&lt;---&gt;数据结构">数据结构</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2026-10-01 22:57:31'>2026-10-01 15:16</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:683</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F1-1"><span class="toc-text">程序1.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F1-2-1-3"><span class="toc-text">程序1.2-1.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F1-4"><span class="toc-text">程序1.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在《数据结构与算法c&#x2F;c++版》上抄程序的时候发现了一些笔误，所以有了这个系列的文章，这里的程序是自己验证过可运行的，也是一个学习的记录 (^ - ^)</p>
+<h2 id="程序1-1"><a href="#程序1-1" class="headerlink" title="程序1.1"></a>程序1.1</h2><p>抽象数据类型</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*------------------------------------*/</span></span><br><span class="line"></span><br><span class="line"><span class="type">static</span> <span class="type">double</span> pi = <span class="number">3.14</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Circle</span> &#123;</span><br><span class="line">    <span class="type">double</span> radius;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">Area</span><span class="params">(<span class="keyword">struct</span> Circle *c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> pi * c-&gt;radius * c-&gt;radius;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">Perimeter</span><span class="params">(<span class="keyword">struct</span> Circle *c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span> * pi * c-&gt;radius;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*------------------------------------*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Circle *circle = <span class="keyword">new</span> <span class="built_in">Circle</span>();</span><br><span class="line">    circle-&gt;radius = <span class="number">3.0</span>;</span><br><span class="line">    <span class="type">double</span> area = <span class="built_in">Area</span>(circle);</span><br><span class="line">    <span class="type">double</span> perimeter = <span class="built_in">Perimeter</span>(circle);</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Area: &quot;</span> &lt;&lt; area &lt;&lt; std::endl;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Perimeter:&quot;</span> &lt;&lt; perimeter &lt;&lt; std::endl;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">delete</span> circle;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="程序1-2-1-3"><a href="#程序1-2-1-3" class="headerlink" title="程序1.2-1.3"></a>程序1.2-1.3</h2><p>抽象数据类型</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;memory&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*------------------------------------*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">	<span class="type">static</span> <span class="type">double</span> pi;</span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">double</span> <span class="title">Area</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">double</span> <span class="title">Perimeter</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">virtual</span> ~<span class="built_in">Shape</span>() = <span class="keyword">default</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">double</span> Shape::pi = <span class="number">3.14</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*------------------------------------*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 圆形 </span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Circle</span> : <span class="keyword">public</span> Shape &#123;</span><br><span class="line">	<span class="type">double</span> _radius = <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">Circle</span>(<span class="type">double</span> r) : _radius(r) &#123;&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">double</span> <span class="title">Area</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> pi * _radius * _radius;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">double</span> <span class="title">Perimeter</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span> * pi * _radius;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*------------------------------------*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 长方形 </span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Rectangle</span> : <span class="keyword">public</span> Shape &#123;</span><br><span class="line">	<span class="type">double</span> _length, _width;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">Rectangle</span>(<span class="type">double</span> l, <span class="type">double</span> w) : _length(l), _width(w) &#123;&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">double</span> <span class="title">Area</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> _length * _width;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">double</span> <span class="title">Perimeter</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span> * (_length + _width);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">/* 法一 </span></span><br><span class="line"><span class="comment">	Shape *s1 = new Circle(3.0);</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; s1-&gt;Area() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">	std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; s1-&gt;Perimeter() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	Shape *s2 = new Rectangle(2.0, 3.0);</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; s2-&gt;Area() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">	std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; s2-&gt;Perimeter() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	delete s1;</span></span><br><span class="line"><span class="comment">	delete s2;</span></span><br><span class="line"><span class="comment">	*/</span> </span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* 法二 </span></span><br><span class="line"><span class="comment">	Shape *shapes[2];</span></span><br><span class="line"><span class="comment">	shapes[0] = new Circle(3.0);</span></span><br><span class="line"><span class="comment">	shapes[1] = new Rectangle(2.0, 3.0);</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	for (int i = 0; i &lt; 2; i++) &#123;</span></span><br><span class="line"><span class="comment">		std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; shapes[i]-&gt;Area() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">		std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; shapes[i]-&gt;Perimeter() &lt;&lt; std::endl; </span></span><br><span class="line"><span class="comment">		delete shapes[i];</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* 法三 （智能指针） </span></span><br><span class="line"><span class="comment">	std::vector&lt;std::unique_ptr&lt;Shape&gt;&gt; shapes;</span></span><br><span class="line"><span class="comment">	shapes.push_back(std::make_unique&lt;Circle&gt;(3.0));</span></span><br><span class="line"><span class="comment">	shapes.push_back(std::make_unique&lt;Rectangle&gt;(2.0, 3.0));</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	for (auto &amp;s : shapes) &#123;</span></span><br><span class="line"><span class="comment">		std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; s-&gt;Area() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">		std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; s-&gt;Perimeter() &lt;&lt; std::endl; </span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">	*/</span> </span><br><span class="line">	</span><br><span class="line">	std::vector&lt;Shape*&gt; shapes;</span><br><span class="line">	shapes.<span class="built_in">push_back</span>(<span class="keyword">new</span> <span class="built_in">Circle</span>(<span class="number">3.0</span>));</span><br><span class="line">	shapes.<span class="built_in">push_back</span>(<span class="keyword">new</span> <span class="built_in">Rectangle</span>(<span class="number">2.0</span>, <span class="number">3.0</span>));</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> *s : shapes) &#123;</span><br><span class="line">		std::cout &lt;&lt; <span class="string">&quot;Area: &quot;</span> &lt;&lt; s-&gt;<span class="built_in">Area</span>() &lt;&lt; std::endl;</span><br><span class="line">		std::cout &lt;&lt; <span class="string">&quot;Perimeter: &quot;</span> &lt;&lt; s-&gt;<span class="built_in">Perimeter</span>() &lt;&lt; std::endl; </span><br><span class="line">		<span class="keyword">delete</span> s;</span><br><span class="line">	&#125;</span><br><span class="line">	 </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="程序1-4"><a href="#程序1-4" class="headerlink" title="程序1.4"></a>程序1.4</h2><p>欧几里得算法</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r = a % b;</span><br><span class="line">	<span class="keyword">while</span> (r != <span class="number">0</span>) &#123;</span><br><span class="line">		a = b;</span><br><span class="line">		b = r;</span><br><span class="line">		r = a % b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> b;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">/* 递归版</span></span><br><span class="line"><span class="comment">int gcd(int a, int b) &#123;</span></span><br><span class="line"><span class="comment">	return b == 0 ? a : gcd(b, a % b);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">136</span>;</span><br><span class="line">	<span class="type">int</span> b = <span class="number">438</span>;</span><br><span class="line">	<span class="type">int</span> g = <span class="built_in">gcd</span>(a, b);</span><br><span class="line">	std::cout &lt;&lt; <span class="string">&quot;gcd(a, b) = &quot;</span> &lt;&lt; g &lt;&lt; std::endl;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>（待补充）</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 linda@modico.net </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>课内学习 之 数据结构1</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">683</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="小珠">小珠</a></p>
+    <p><span class="copy-title">发布时间:</span>2026-10-01, 15:16:17</p>
+    <p><span class="copy-title">最后更新:</span>2026-10-01, 22:57:31</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2026/10/01/%E8%AF%BE%E5%86%85%E5%AD%A6%E4%B9%A0%20%E4%B9%8B%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/" title="课内学习 之 数据结构1">https://xiaozhu-jmxs.github.io/2026/10/01/%E8%AF%BE%E5%86%85%E5%AD%A6%E4%B9%A0%20%E4%B9%8B%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2026 小珠
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        background: url("/img/article-bg.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
