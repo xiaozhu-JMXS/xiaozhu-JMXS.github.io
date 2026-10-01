@@ -197,7 +197,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="2">
-<input type="hidden" id="yelog_site_word_count" value="892">
+<input type="hidden" id="yelog_site_word_count" value="857">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -323,7 +323,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:209</span>
+        <span>字数:219</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -361,17 +361,53 @@
         <h1 id="rsa9"><a href="#rsa9" class="headerlink" title="rsa9"></a>rsa9</h1><p><strong>难度</strong>：&lt;中等&gt;<br><strong>最终flag</strong>：<code>flag{81a8dc8a46c83f0681a62e515dcb5f0c}</code></p>
 <hr>
 <h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>题目给了一个 rsa 加密脚本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"></span><br><span class="line">flag = <span class="string">&#x27;*********************&#x27;</span></span><br><span class="line">hex_flag=<span class="built_in">int</span>(flag.encode(<span class="string">&quot;hex&quot;</span>),<span class="number">16</span>)</span><br><span class="line"></span><br><span class="line">p=getPrime(<span class="number">512</span>)</span><br><span class="line">q=getPrime(<span class="number">512</span>)</span><br><span class="line"></span><br><span class="line">n=p*q</span><br><span class="line">e=<span class="number">0x3</span></span><br><span class="line">c=<span class="built_in">pow</span>(hex_flag,e,n)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;n=&quot;</span>,<span class="built_in">hex</span>(n))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;e=&quot;</span>,<span class="built_in">hex</span>(e))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c=&quot;</span>,<span class="built_in">hex</span>(c))</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">(&#x27;n=&#x27;, &#x27;0x86f4be77b79e166a6311e7982ba2e5ff479db93a01c56034479a9e35382293c35769da222974e9425829099aa4fe4f41185283866202042b356194bab312e6ed2fb0b10b1b74767dc1cc5306872d33b1f3b75612c594751ec70e4cf5fccc6fceafe0401648869cc40425a176ab70286d92a29dfd675f2384c9383e0a9750b25bL&#x27;)</span></span><br><span class="line"><span class="string">(&#x27;e=&#x27;, &#x27;0x3&#x27;)</span></span><br><span class="line"><span class="string">(&#x27;c=&#x27;, &#x27;0x10652cdf7ed2bc53f58b321f476c3a3cf3281e541f4d533a73a0fcbf525230f2e01c183dee660676317ea99250202548e5525b0c14adbeb77d4fa7e2e1d339L&#x27;)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="language-python">from Crypto.Util.number import *
+import binascii
+import gmpy2
 
+flag = &#39;*********************&#39;
+hex_flag=int(flag.encode(&quot;hex&quot;),16)
+
+p=getPrime(512)
+q=getPrime(512)
+
+n=p*q
+e=0x3
+c=pow(hex_flag,e,n)
+
+print(&quot;n=&quot;,hex(n))
+print(&quot;e=&quot;,hex(e))
+print(&quot;c=&quot;,hex(c))
+
+&#39;&#39;&#39;
+(&#39;n=&#39;, &#39;0x86f4be77b79e166a6311e7982ba2e5ff479db93a01c56034479a9e35382293c35769da222974e9425829099aa4fe4f41185283866202042b356194bab312e6ed2fb0b10b1b74767dc1cc5306872d33b1f3b75612c594751ec70e4cf5fccc6fceafe0401648869cc40425a176ab70286d92a29dfd675f2384c9383e0a9750b25bL&#39;)
+(&#39;e=&#39;, &#39;0x3&#39;)
+(&#39;c=&#39;, &#39;0x10652cdf7ed2bc53f58b321f476c3a3cf3281e541f4d533a73a0fcbf525230f2e01c183dee660676317ea99250202548e5525b0c14adbeb77d4fa7e2e1d339L&#39;)
+&#39;&#39;&#39;
+</code></pre>
 <p><strong>关键</strong>：e 很小，可以尝试直接开立方<br>注：<code>L</code> 是 <code>python 2</code> 的整形后缀，<code>python 3</code> 直接去掉就行</p>
 <hr>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>由于暂时没有其他提示，首先尝试开立方</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> iroot</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line"></span><br><span class="line">c = <span class="number">0x10652cdf7ed2bc53f58b321f476c3a3cf3281e541f4d533a73a0fcbf525230f2e01c183dee660676317ea99250202548e5525b0c14adbeb77d4fa7e2e1d339</span></span><br><span class="line">e = <span class="number">0x3</span></span><br><span class="line">n = <span class="number">0x86f4be77b79e166a6311e7982ba2e5ff479db93a01c56034479a9e35382293c35769da222974e9425829099aa4fe4f41185283866202042b356194bab312e6ed2fb0b10b1b74767dc1cc5306872d33b1f3b75612c594751ec70e4cf5fccc6fceafe0401648869cc40425a176ab70286d92a29dfd675f2384c9383e0a9750b25b</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">m = iroot(c, e)[<span class="number">0</span>]</span><br><span class="line">flag = long_to_bytes(m).decode()</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-python">from gmpy2 import iroot
+from Crypto.Util.number import long_to_bytes
 
+c = 0x10652cdf7ed2bc53f58b321f476c3a3cf3281e541f4d533a73a0fcbf525230f2e01c183dee660676317ea99250202548e5525b0c14adbeb77d4fa7e2e1d339
+e = 0x3
+n = 0x86f4be77b79e166a6311e7982ba2e5ff479db93a01c56034479a9e35382293c35769da222974e9425829099aa4fe4f41185283866202042b356194bab312e6ed2fb0b10b1b74767dc1cc5306872d33b1f3b75612c594751ec70e4cf5fccc6fceafe0401648869cc40425a176ab70286d92a29dfd675f2384c9383e0a9750b25b
+
+
+m = iroot(c, e)[0]
+flag = long_to_bytes(m).decode()
+print(flag)
+</code></pre>
 <p>得到 <code>flag is md5(&quot;SmallM&quot;)</code></p>
 <p>对 <code>SmallM</code> 进行 <code>md5</code> </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line">s = <span class="string">&quot;SmallM&quot;</span></span><br><span class="line">md5 = hashlib.md5(s.encode()).hexdigest()</span><br><span class="line"><span class="built_in">print</span>(md5)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-python">import hashlib
 
+s = &quot;SmallM&quot;
+md5 = hashlib.md5(s.encode()).hexdigest()
+print(md5)
+</code></pre>
 <p>得到 <code>81a8dc8a46c83f0681a62e515dcb5f0c</code> 即为答案</p>
 
       
@@ -383,7 +419,7 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>buuctf rsa9</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">209</span></p>
+    <p><span class="copy-title">字数:</span><span class="post-count">219</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="小珠">小珠</a></p>
     <p><span class="copy-title">发布时间:</span>2026-09-30, 16:13:09</p>
     <p><span class="copy-title">最后更新:</span>2026-10-01, 14:08:16</p>
@@ -434,6 +470,20 @@
 
         /*高亮代码块行号*/
         
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
 
         /*访问数量*/
         
@@ -453,6 +503,38 @@
 </script>
 
 <!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 18px 3px 15px 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
 
 <!--自定义样式设置-->
 <style>
@@ -551,6 +633,16 @@
     }
     
 
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
     
 </style>
 

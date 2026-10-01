@@ -197,7 +197,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="2">
-<input type="hidden" id="yelog_site_word_count" value="892">
+<input type="hidden" id="yelog_site_word_count" value="857">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -316,7 +316,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:683</span>
+        <span>字数:638</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -353,14 +353,169 @@
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在《数据结构与算法c&#x2F;c++版》上抄程序的时候发现了一些笔误，所以有了这个系列的文章，这里的程序是自己验证过可运行的，也是一个学习的记录 (^ - ^)</p>
 <h2 id="程序1-1"><a href="#程序1-1" class="headerlink" title="程序1.1"></a>程序1.1</h2><p>抽象数据类型</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*------------------------------------*/</span></span><br><span class="line"></span><br><span class="line"><span class="type">static</span> <span class="type">double</span> pi = <span class="number">3.14</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Circle</span> &#123;</span><br><span class="line">    <span class="type">double</span> radius;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">Area</span><span class="params">(<span class="keyword">struct</span> Circle *c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> pi * c-&gt;radius * c-&gt;radius;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">Perimeter</span><span class="params">(<span class="keyword">struct</span> Circle *c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span> * pi * c-&gt;radius;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*------------------------------------*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Circle *circle = <span class="keyword">new</span> <span class="built_in">Circle</span>();</span><br><span class="line">    circle-&gt;radius = <span class="number">3.0</span>;</span><br><span class="line">    <span class="type">double</span> area = <span class="built_in">Area</span>(circle);</span><br><span class="line">    <span class="type">double</span> perimeter = <span class="built_in">Perimeter</span>(circle);</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Area: &quot;</span> &lt;&lt; area &lt;&lt; std::endl;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Perimeter:&quot;</span> &lt;&lt; perimeter &lt;&lt; std::endl;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">delete</span> circle;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 
+/*------------------------------------*/
+
+static double pi = 3.14; 
+
+struct Circle {
+    double radius;
+};
+
+double Area(struct Circle *c) {
+    return pi * c-&gt;radius * c-&gt;radius;
+}
+
+double Perimeter(struct Circle *c) {
+    return 2 * pi * c-&gt;radius;
+}
+
+/*------------------------------------*/
+
+int main() {
+    Circle *circle = new Circle();
+    circle-&gt;radius = 3.0;
+    double area = Area(circle);
+    double perimeter = Perimeter(circle);
+    std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; area &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;Perimeter:&quot; &lt;&lt; perimeter &lt;&lt; std::endl;
+    
+	delete circle;
+    return 0;
+}
+</code></pre>
 <h2 id="程序1-2-1-3"><a href="#程序1-2-1-3" class="headerlink" title="程序1.2-1.3"></a>程序1.2-1.3</h2><p>抽象数据类型</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;memory&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*------------------------------------*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">	<span class="type">static</span> <span class="type">double</span> pi;</span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">double</span> <span class="title">Area</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">double</span> <span class="title">Perimeter</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">virtual</span> ~<span class="built_in">Shape</span>() = <span class="keyword">default</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">double</span> Shape::pi = <span class="number">3.14</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*------------------------------------*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 圆形 </span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Circle</span> : <span class="keyword">public</span> Shape &#123;</span><br><span class="line">	<span class="type">double</span> _radius = <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">Circle</span>(<span class="type">double</span> r) : _radius(r) &#123;&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">double</span> <span class="title">Area</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> pi * _radius * _radius;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">double</span> <span class="title">Perimeter</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span> * pi * _radius;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*------------------------------------*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 长方形 </span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Rectangle</span> : <span class="keyword">public</span> Shape &#123;</span><br><span class="line">	<span class="type">double</span> _length, _width;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">Rectangle</span>(<span class="type">double</span> l, <span class="type">double</span> w) : _length(l), _width(w) &#123;&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">double</span> <span class="title">Area</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> _length * _width;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="type">double</span> <span class="title">Perimeter</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span> * (_length + _width);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">/* 法一 </span></span><br><span class="line"><span class="comment">	Shape *s1 = new Circle(3.0);</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; s1-&gt;Area() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">	std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; s1-&gt;Perimeter() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	Shape *s2 = new Rectangle(2.0, 3.0);</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; s2-&gt;Area() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">	std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; s2-&gt;Perimeter() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	delete s1;</span></span><br><span class="line"><span class="comment">	delete s2;</span></span><br><span class="line"><span class="comment">	*/</span> </span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* 法二 </span></span><br><span class="line"><span class="comment">	Shape *shapes[2];</span></span><br><span class="line"><span class="comment">	shapes[0] = new Circle(3.0);</span></span><br><span class="line"><span class="comment">	shapes[1] = new Rectangle(2.0, 3.0);</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	for (int i = 0; i &lt; 2; i++) &#123;</span></span><br><span class="line"><span class="comment">		std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; shapes[i]-&gt;Area() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">		std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; shapes[i]-&gt;Perimeter() &lt;&lt; std::endl; </span></span><br><span class="line"><span class="comment">		delete shapes[i];</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* 法三 （智能指针） </span></span><br><span class="line"><span class="comment">	std::vector&lt;std::unique_ptr&lt;Shape&gt;&gt; shapes;</span></span><br><span class="line"><span class="comment">	shapes.push_back(std::make_unique&lt;Circle&gt;(3.0));</span></span><br><span class="line"><span class="comment">	shapes.push_back(std::make_unique&lt;Rectangle&gt;(2.0, 3.0));</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	for (auto &amp;s : shapes) &#123;</span></span><br><span class="line"><span class="comment">		std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; s-&gt;Area() &lt;&lt; std::endl;</span></span><br><span class="line"><span class="comment">		std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; s-&gt;Perimeter() &lt;&lt; std::endl; </span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">	*/</span> </span><br><span class="line">	</span><br><span class="line">	std::vector&lt;Shape*&gt; shapes;</span><br><span class="line">	shapes.<span class="built_in">push_back</span>(<span class="keyword">new</span> <span class="built_in">Circle</span>(<span class="number">3.0</span>));</span><br><span class="line">	shapes.<span class="built_in">push_back</span>(<span class="keyword">new</span> <span class="built_in">Rectangle</span>(<span class="number">2.0</span>, <span class="number">3.0</span>));</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> *s : shapes) &#123;</span><br><span class="line">		std::cout &lt;&lt; <span class="string">&quot;Area: &quot;</span> &lt;&lt; s-&gt;<span class="built_in">Area</span>() &lt;&lt; std::endl;</span><br><span class="line">		std::cout &lt;&lt; <span class="string">&quot;Perimeter: &quot;</span> &lt;&lt; s-&gt;<span class="built_in">Perimeter</span>() &lt;&lt; std::endl; </span><br><span class="line">		<span class="keyword">delete</span> s;</span><br><span class="line">	&#125;</span><br><span class="line">	 </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt; 
+#include &lt;memory&gt;
 
+/*------------------------------------*/
+
+struct Shape {
+	static double pi;
+	virtual double Area() = 0;
+	virtual double Perimeter() = 0;
+	virtual ~Shape() = default;
+};
+
+double Shape::pi = 3.14;
+
+/*------------------------------------*/
+
+// 圆形 
+struct Circle : public Shape {
+	double _radius = 0;
+	
+	Circle(double r) : _radius(r) {}
+	
+	double Area() override {
+		return pi * _radius * _radius;
+	}
+	
+	double Perimeter() override {
+		return 2 * pi * _radius;
+	}
+};
+
+/*------------------------------------*/
+
+// 长方形 
+struct Rectangle : public Shape {
+	double _length, _width;
+	
+	Rectangle(double l, double w) : _length(l), _width(w) {}
+	
+	double Area() override {
+		return _length * _width;
+	}
+	
+	double Perimeter() override {
+		return 2 * (_length + _width);
+	}
+};
+
+
+int main() {
+	/* 法一 
+	Shape *s1 = new Circle(3.0);
+	
+	std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; s1-&gt;Area() &lt;&lt; std::endl;
+	std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; s1-&gt;Perimeter() &lt;&lt; std::endl;
+	
+	Shape *s2 = new Rectangle(2.0, 3.0);
+	
+	std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; s2-&gt;Area() &lt;&lt; std::endl;
+	std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; s2-&gt;Perimeter() &lt;&lt; std::endl;
+	
+	delete s1;
+	delete s2;
+	*/ 
+	
+	/* 法二 
+	Shape *shapes[2];
+	shapes[0] = new Circle(3.0);
+	shapes[1] = new Rectangle(2.0, 3.0);
+	
+	for (int i = 0; i &lt; 2; i++) {
+		std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; shapes[i]-&gt;Area() &lt;&lt; std::endl;
+		std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; shapes[i]-&gt;Perimeter() &lt;&lt; std::endl; 
+		delete shapes[i];
+	}
+	*/
+	
+	/* 法三 （智能指针） 
+	std::vector&lt;std::unique_ptr&lt;Shape&gt;&gt; shapes;
+	shapes.push_back(std::make_unique&lt;Circle&gt;(3.0));
+	shapes.push_back(std::make_unique&lt;Rectangle&gt;(2.0, 3.0));
+	
+	for (auto &amp;s : shapes) {
+		std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; s-&gt;Area() &lt;&lt; std::endl;
+		std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; s-&gt;Perimeter() &lt;&lt; std::endl; 
+	}
+	*/ 
+	
+	std::vector&lt;Shape*&gt; shapes;
+	shapes.push_back(new Circle(3.0));
+	shapes.push_back(new Rectangle(2.0, 3.0));
+	
+	for (auto *s : shapes) {
+		std::cout &lt;&lt; &quot;Area: &quot; &lt;&lt; s-&gt;Area() &lt;&lt; std::endl;
+		std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; s-&gt;Perimeter() &lt;&lt; std::endl; 
+		delete s;
+	}
+	 
+	return 0;
+}
+</code></pre>
 <h2 id="程序1-4"><a href="#程序1-4" class="headerlink" title="程序1.4"></a>程序1.4</h2><p>欧几里得算法</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r = a % b;</span><br><span class="line">	<span class="keyword">while</span> (r != <span class="number">0</span>) &#123;</span><br><span class="line">		a = b;</span><br><span class="line">		b = r;</span><br><span class="line">		r = a % b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> b;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">/* 递归版</span></span><br><span class="line"><span class="comment">int gcd(int a, int b) &#123;</span></span><br><span class="line"><span class="comment">	return b == 0 ? a : gcd(b, a % b);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">136</span>;</span><br><span class="line">	<span class="type">int</span> b = <span class="number">438</span>;</span><br><span class="line">	<span class="type">int</span> g = <span class="built_in">gcd</span>(a, b);</span><br><span class="line">	std::cout &lt;&lt; <span class="string">&quot;gcd(a, b) = &quot;</span> &lt;&lt; g &lt;&lt; std::endl;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 
+int gcd(int a, int b) {
+	int r = a % b;
+	while (r != 0) {
+		a = b;
+		b = r;
+		r = a % b;
+	}
+	return b;
+} 
+
+/* 递归版
+int gcd(int a, int b) {
+	return b == 0 ? a : gcd(b, a % b);
+}
+*/
+
+int main() {
+	int a = 136;
+	int b = 438;
+	int g = gcd(a, b);
+	std::cout &lt;&lt; &quot;gcd(a, b) = &quot; &lt;&lt; g &lt;&lt; std::endl;
+	
+	return 0;
+}
+</code></pre>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>（待补充）</p>
 
       
@@ -372,7 +527,7 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>课内学习 之 数据结构1</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">683</span></p>
+    <p><span class="copy-title">字数:</span><span class="post-count">638</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="小珠">小珠</a></p>
     <p><span class="copy-title">发布时间:</span>2026-10-01, 15:16:17</p>
     <p><span class="copy-title">最后更新:</span>2026-10-01, 22:57:31</p>
@@ -423,6 +578,20 @@
 
         /*高亮代码块行号*/
         
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
 
         /*访问数量*/
         
@@ -442,6 +611,38 @@
 </script>
 
 <!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 18px 3px 15px 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
 
 <!--自定义样式设置-->
 <style>
@@ -540,6 +741,16 @@
     }
     
 
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
     
 </style>
 
