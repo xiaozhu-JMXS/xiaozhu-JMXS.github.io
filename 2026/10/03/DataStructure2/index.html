@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>课内学习 之 数据结构2 | 有暗香盈袖</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="课内学习 之 数据结构2 | 有暗香盈袖">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="小珠，是一个对世界充满好奇的人类，对密码学很感兴趣，正在努力学习(^-^)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="https://xiaozhu-jmxs.github.io/about/index.html">
+<meta property="og:site_name" content="有暗香盈袖">
+<meta property="og:description" content="小珠，是一个对世界充满好奇的人类，对密码学很感兴趣，正在努力学习(^-^)">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-09-30T14:30:00.000Z">
+<meta property="article:modified_time" content="2026-09-30T14:57:30.312Z">
+<meta property="article:author" content="小珠">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>小珠</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="github"
+               href="https://github.com/xiaozhu-JMXS"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:linda@modico.net"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(3)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="功课">
+            <i class="fold iconfont icon-right"></i>
+            功课
+            <small>(2)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="功课&lt;---&gt;数据结构">
+            
+            数据结构
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="做题小记">
+            <i class="fold iconfont icon-right"></i>
+            做题小记
+            <small>(1)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="做题小记&lt;---&gt;buuctf">
+            
+            buuctf
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="3">
+<input type="hidden" id="yelog_site_word_count" value="6.1k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>RSA</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 功课 数据结构 "
+           href="/2026/10/03/DataStructure2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="课内学习 之 数据结构2">课内学习 之 数据结构2</span>
+            <span class="post-date" title="2026-10-03 14:21:15">2026/10/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 功课 数据结构 "
+           href="/2026/10/01/DataStructure1/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="课内学习 之 数据结构1">课内学习 之 数据结构1</span>
+            <span class="post-date" title="2026-10-01 15:16:17">2026/10/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 做题小记 buuctf "
+           href="/2026/09/30/buuctf-rsa9/"
+           data-tag="RSA"
+           data-author="" >
+            <span class="post-title" title="buuctf rsa9">buuctf rsa9</span>
+            <span class="post-date" title="2026-09-30 16:13:09">2026/09/30</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-DataStructure2" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">课内学习 之 数据结构2</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="功课">功课</a> > 
+            
+            <a  data-rel="功课&lt;---&gt;数据结构">数据结构</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2026-10-18 15:45:33'>2026-10-03 14:21</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:5.3k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F2-1-2-2"><span class="toc-text">程序2.1-2.2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#list-h"><span class="toc-text">list.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#list-c"><span class="toc-text">list.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-c"><span class="toc-text">main.c</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F2-3-2-4"><span class="toc-text">程序2.3-2.4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#seqlist-h"><span class="toc-text">seqlist.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#seqlist-c"><span class="toc-text">seqlist.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-c-1"><span class="toc-text">main.c</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F2-5"><span class="toc-text">程序2.5</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#seqlist-h-1"><span class="toc-text">seqlist.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#seqlist-c-1"><span class="toc-text">seqlist.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#test-seqlist-c"><span class="toc-text">test_seqlist.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-c-2"><span class="toc-text">*main.c</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F2-6-2-7"><span class="toc-text">程序2.6-2.7</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#linear-list-cpp-h"><span class="toc-text">linear_list_cpp.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-cpp"><span class="toc-text">main.cpp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F2-8-2-11"><span class="toc-text">程序2.8-2.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#linked-list-h"><span class="toc-text">linked_list.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linked-list-c"><span class="toc-text">linked_list.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-c-3"><span class="toc-text">main.c</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F2-12"><span class="toc-text">程序2.12</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#linked-list-h-1"><span class="toc-text">linked_list.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linked-list-c-1"><span class="toc-text">linked_list.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#test-linked-list-c"><span class="toc-text">test_linked_list.c</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F2-13-2-14"><span class="toc-text">程序2.13-2.14</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#linear-list-cpp-h-1"><span class="toc-text">linear_list_cpp.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#test-list-cpp"><span class="toc-text">test_list.cpp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F2-15-2-16"><span class="toc-text">程序2.15-2.16</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dlist-cpp"><span class="toc-text">dlist.cpp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="toc-text">编译运行命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在第二章里碰到的笔误和我不太喜欢的书写风格包括但不限于少打空格、拼写错误、顺序链式混用、少写文件头、程序与展示的输出结果对不上、取错值等等，下面的程序与课本有些许出入，但基本是以课本为基础进行的改进，然后补了一些测试方便检查每个程序的运行结果</p>
+<h2 id="程序2-1-2-2"><a href="#程序2-1-2-2" class="headerlink" title="程序2.1-2.2"></a>程序2.1-2.2</h2><p>线性表的抽象数据类型</p>
+<h3 id="list-h"><a href="#list-h" class="headerlink" title="list.h"></a>list.h</h3><pre><code class="language-c">#ifndef LLIST_H
+#define LLIST_H
+
+#include &lt;stdio.h&gt;
+#include &lt;stdbool.h&gt;
+
+typedef int ElementType;
+typedef struct Linear_List LList;
+
+struct Linear_List {
+	ElementType data[100];
+	int length;
+};
+
+void initialize(LList *list);
+void destroy(LList *list);
+void clear_all_data(LList *list);
+bool is_empty(LList *list);
+size_t size(LList *list);               // size_t = unsigned long 
+ElementType get(LList *list, int idx);
+void set(LList *list, int idx, ElementType d);
+void add(LList *list, int idx, ElementType d); 
+ElementType remove_node(LList *list, int idx);
+int index_of(LList *list, ElementType key);
+
+#endif
+</code></pre>
+<h3 id="list-c"><a href="#list-c" class="headerlink" title="list.c"></a>list.c</h3><pre><code class="language-c">#include &quot;llist.h&quot;
+
+void initialize(LList *list) {
+	list-&gt;length = 0;
+}
+
+void destroy(LList *list) {
+	
+}
+
+void clear_all_data(LList *list) {
+	list-&gt;length = 0;
+}
+
+bool is_empty(LList *list) {
+	if (list-&gt;length == 0) return true;
+	else return false;
+}
+
+size_t size(LList *list) {
+	return list-&gt;length;
+}
+
+ElementType get(LList *list, int idx) {
+	return list-&gt;data[idx];
+}
+
+//重设值
+void set(LList *list, int idx, ElementType d) {
+	list-&gt;data[idx] = d;
+}
+
+void add(LList *list, int idx, ElementType d) {
+	//检查
+	if (list-&gt;length &gt;= 100) {
+		printf(&quot;list is full\n&quot;);
+		return;
+	} 
+	if (idx &lt; 0 || idx &gt; list-&gt;length) {
+		printf(&quot;index is invalid\n&quot;);
+		return;
+	}
+	
+	//挪 
+	for (int i = list-&gt;length; i &gt; idx; i--) {
+		list-&gt;data[i] = list-&gt;data[i-1];
+	}
+	
+	//插
+	list-&gt;data[idx] = d; 
+	list-&gt;length++;
+}
+
+ElementType remove_node(LList *list, int idx) {
+	//检查 
+	if (idx &lt; 0 || idx &gt;= list-&gt;length) {     // 防止 idx = length 越界 
+		printf(&quot;index is invalid\n&quot;);
+		return -1;
+	}
+	
+	//保存 
+	ElementType removed = list-&gt;data[idx];
+	
+	// 挪（删）
+	for (int i = idx; i &lt; list-&gt;length - 1; i++) {      // length-1 防止越界  
+		list-&gt;data[i] = list-&gt;data[i+1];
+	} 
+	list-&gt;length--;
+	return removed; 
+}
+
+int index_of(LList *list, ElementType key) {
+	for (int idx = 0; idx &lt; list-&gt;length; idx++) {
+		if (list-&gt;data[idx] == key) return idx;
+	} 
+	return -1;
+}
+</code></pre>
+<h3 id="main-c"><a href="#main-c" class="headerlink" title="main.c"></a>main.c</h3><pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &quot;llist.h&quot;
+
+int main() {
+    LList list;
+	initialize(&amp;list); 
+	
+    // 1. 空表测试
+	printf(&quot;Is empty? %d\tsize: %zu\n&quot;, is_empty(&amp;list), size(&amp;list));
+
+    // 2. 插入测试
+    for (int i = 0; i &lt; 6; i++) {
+        add(&amp;list, i, i);
+    }
+    printf(&quot;list: &quot;);
+    for (int i = 0; i &lt; size(&amp;list); i++) {
+        printf(&quot;%d &quot;, get(&amp;list, i));
+    }
+
+    // 2.5 头尾插入测试
+    add(&amp;list, 0, 0);
+    add(&amp;list, 6, 5);
+    printf(&quot;\nafter insertion: &quot;);
+    for (int i = 0; i &lt; size(&amp;list); i++) {
+        printf(&quot;%d &quot;, get(&amp;list, i));
+    }
+
+    // 3. 中间插入测试
+    printf(&quot;\nnew list: &quot;);
+    add(&amp;list, 2, 8);
+    for (int i = 0; i &lt; size(&amp;list); i++) {
+        printf(&quot;%d &quot;, get(&amp;list, i));
+    }
+
+    // 4. 删除测试
+    /*
+    参数求值顺序由编译器决定，不是我能控制的。
+    代码里出现多个有副作用的函数调用时，一定要拆成多行，让顺序明确。
+    错误示例：
+    printf(&quot;\nremoved node: %d, %d, %d\n&quot;, remove_node(&amp;list, 1), remove_node(&amp;list, 0), remove_node(&amp;list, 8));
+    */
+    int r1 = remove_node(&amp;list, 8);
+    int r2 = remove_node(&amp;list, 2);
+    int r3 = remove_node(&amp;list, 0);
+    printf(&quot;\nremoved node: %d, %d, %d\n&quot;, r3, r2, r1);
+    printf(&quot;after remove: &quot;);
+    for (int i = 0; i &lt; size(&amp;list); i++) {
+        printf(&quot;%d &quot;, get(&amp;list, i));
+    }
+
+    // 5. 查找测试
+    printf(&quot;\n3 is at position: %d\n&quot;, index_of(&amp;list, 3));
+    printf(&quot;99 is at position: %d\n&quot;, index_of(&amp;list, 99));
+    
+    // 6. 清空测试
+    clear_all_data(&amp;list);
+    printf(&quot;size: %zu&quot;, size(&amp;list));
+    return 0;
+}
+</code></pre>
+<h2 id="程序2-3-2-4"><a href="#程序2-3-2-4" class="headerlink" title="程序2.3-2.4"></a>程序2.3-2.4</h2><p>顺序表的实现</p>
+<h3 id="seqlist-h"><a href="#seqlist-h" class="headerlink" title="seqlist.h"></a>seqlist.h</h3><pre><code class="language-c">#ifndef CHAPTER_2_SEQLIST_H
+#define CHAPTER_2_SEQLIST_H
+
+#include &lt;stdio.h&gt;
+#include &lt;stdbool.h&gt;
+
+typedef int ElementType;
+typedef struct Linear_List LList;
+
+struct Linear_List {
+    size_t _length;
+    size_t _capacity;      //线性表所分配的空间
+    ElementType *_data;    //首地址
+};
+
+void initialize(LList *list);
+void destroy(LList *list);
+void clear_all_data(LList *list);
+bool is_empty(LList *list);
+size_t size(LList *list);
+ElementType get(LList *list, int idx);
+void set(LList *list, int idx, ElementType d);
+void add(LList *list, int idx, ElementType d);
+ElementType remove_node(LList *list, int idx);
+int index_of(LList *list, ElementType key);
+#endif
+</code></pre>
+<h3 id="seqlist-c"><a href="#seqlist-c" class="headerlink" title="seqlist.c"></a>seqlist.c</h3><pre><code class="language-c">#include &quot;seqlist.h&quot;
+#include &lt;stdlib.h&gt;
+#include &lt;assert.h&gt;
+
+void initialize(LList *list) {
+    assert (list != NULL);
+    
+    list -&gt;_capacity = 32;
+    list -&gt;_data = (ElementType*) malloc(list-&gt;_capacity * sizeof(ElementType));
+    
+    if (list-&gt;_data == NULL) {
+        fprintf(stderr, &quot;not enough memory! \n&quot;);
+        exit(1);
+    }
+    list-&gt;_length = 0;
+}
+
+void destroy(LList *list) {
+    assert(list != NULL);
+    free(list-&gt;_data);
+    list-&gt;_data = NULL;
+    list-&gt;_length = 0;
+    list-&gt;_capacity = 0;
+}
+
+void clear_all_data(LList *list) {
+    assert(list != NULL);
+    //if (list-&gt;_length == 0) return;
+    list-&gt;_length = 0;
+}
+
+bool is_empty(LList *list) {
+    assert(list != NULL); 
+    return list-&gt;_length == 0;
+}
+
+size_t size(LList *list) {
+    assert(list != NULL);
+    return list-&gt;_length;
+}
+
+ElementType get(LList *list, int idx) {
+    assert(list != NULL &amp;&amp; idx &gt;= 0 &amp;&amp; idx &lt;list-&gt;_length);
+    return list-&gt;_data[idx];
+}
+
+void set(LList *list, int idx, ElementType d) {
+    assert(list != NULL &amp;&amp; idx &gt;= 0 &amp;&amp; idx &lt;list-&gt;_length);
+    list-&gt;_data[idx] = d;
+}
+
+void add(LList *list, int idx, ElementType d) {
+    assert(list != NULL &amp;&amp; idx &gt;= 0 &amp;&amp; idx &lt;= list-&gt;_length);
+    
+    ElementType *temp = list-&gt;_data;
+
+    if (list-&gt;_capacity &lt; list-&gt;_length + 1) {
+        list-&gt;_capacity *= 2;
+        temp = (ElementType*) malloc(sizeof(ElementType) * list-&gt;_capacity);
+        if (temp == NULL) {
+            fprintf(stderr, &quot;not enough memory! \n&quot;);
+            exit(1);
+        }
+        for (size_t i = 0; i &lt; idx; ++i) {
+            temp[i] = list-&gt;_data[i];
+        }
+    }
+
+    for (size_t i = list-&gt;_length; i &gt; idx; --i) {
+        temp[i] = list-&gt;_data[i - 1];
+    }
+    temp[idx] = d;
+
+    if (temp != list-&gt;_data) {
+        free(list-&gt;_data);
+        list-&gt;_data = temp;
+    }
+    ++list-&gt;_length;
+}
+
+ElementType remove_node(LList *list, int idx) {
+    assert(list != NULL &amp;&amp; idx &gt;= 0 &amp;&amp; idx &lt; list-&gt;_length);
+    ElementType res = list-&gt;_data[idx];
+    for (int i = idx; i &lt; list-&gt;_length - 1; ++i) {
+        list-&gt;_data[i] = list-&gt;_data[i + 1];
+    }
+    --list-&gt;_length;
+    return res;
+}
+
+int index_of(LList *list, ElementType key) {
+    for (int i = 0; i &lt; list-&gt;_length; ++i) {
+        if (list-&gt;_data[i] == key) {
+            return i;
+        }
+    }
+    return -1;
+}
+</code></pre>
+<h3 id="main-c-1"><a href="#main-c-1" class="headerlink" title="main.c"></a>main.c</h3><pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &quot;seqlist.h&quot;
+
+int main() {
+    LList list;
+	initialize(&amp;list); 
+	
+    // 1. 空表测试
+	printf(&quot;Is empty? %d\tsize: %zu\n&quot;, is_empty(&amp;list), size(&amp;list));
+
+    // 2. 插入测试
+    for (int i = 0; i &lt; 6; i++) {
+        add(&amp;list, i, i);
+    }
+    printf(&quot;list: &quot;);
+    for (int i = 0; i &lt; size(&amp;list); i++) {
+        printf(&quot;%d &quot;, get(&amp;list, i));
+    }
+
+    // 2.5 头尾插入测试
+    add(&amp;list, 0, 0);
+    add(&amp;list, 6, 5);
+    printf(&quot;\nafter insertion: &quot;);
+    for (int i = 0; i &lt; size(&amp;list); i++) {
+        printf(&quot;%d &quot;, get(&amp;list, i));
+    }
+
+    // 3. 中间插入测试
+    printf(&quot;\nnew list: &quot;);
+    add(&amp;list, 2, 8);
+    for (int i = 0; i &lt; size(&amp;list); i++) {
+        printf(&quot;%d &quot;, get(&amp;list, i));
+    }
+
+    // 4. 删除测试
+    /*
+    参数求值顺序由编译器决定，不是我能控制的。
+    代码里出现多个有副作用的函数调用时，一定要拆成多行，让顺序明确。
+    错误示例：
+    printf(&quot;\nremoved node: %d, %d, %d\n&quot;, remove_node(&amp;list, 1), remove_node(&amp;list, 0), remove_node(&amp;list, 8));
+    */
+    int r1 = remove_node(&amp;list, 8);
+    int r2 = remove_node(&amp;list, 2);
+    int r3 = remove_node(&amp;list, 0);
+    printf(&quot;\nremoved node: %d, %d, %d\n&quot;, r3, r2, r1);
+    printf(&quot;after remove: &quot;);
+    for (int i = 0; i &lt; size(&amp;list); i++) {
+        printf(&quot;%d &quot;, get(&amp;list, i));
+    }
+
+    // 5. 查找测试
+    printf(&quot;\n3 is at position: %d\n&quot;, index_of(&amp;list, 3));
+    printf(&quot;99 is at position: %d\n&quot;, index_of(&amp;list, 99));
+    
+    // 6. 清空测试
+    clear_all_data(&amp;list);
+    printf(&quot;size: %zu&quot;, size(&amp;list));
+    return 0;
+}
+</code></pre>
+<h2 id="程序2-5"><a href="#程序2-5" class="headerlink" title="程序2.5"></a>程序2.5</h2><p>顺序表的使用实例 ( 题目见书 p23 )</p>
+<h3 id="seqlist-h-1"><a href="#seqlist-h-1" class="headerlink" title="seqlist.h"></a>seqlist.h</h3><p>同上</p>
+<h3 id="seqlist-c-1"><a href="#seqlist-c-1" class="headerlink" title="seqlist.c"></a>seqlist.c</h3><p>同上</p>
+<h3 id="test-seqlist-c"><a href="#test-seqlist-c" class="headerlink" title="test_seqlist.c"></a>test_seqlist.c</h3><pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &quot;seqlist.h&quot;
+
+/* 书上原版，莫名其妙在这里出现了链表，我觉得很奇怪，就在下面改成顺序表实现了
+void print_all_data(LList *list) {
+    struct Node *t = list-&gt;_head;
+    while (t != NULL) {
+        printf(&quot;%s\n&quot;, t-&gt;_data);
+        t = t-&gt;_next;
+    }
+    printf(&quot;*******************\n&quot;);
+}
+*/
+
+void print_all_data(LList *list) {
+    for (size_t i = 0; i &lt; list-&gt;_length; ++i) {
+        printf(&quot;%s\n&quot;, list-&gt;_data[i]);
+    }
+    printf(&quot;*******************\n&quot;);
+}
+
+int main() {
+    LList l;
+    initialize(&amp;l);
+
+    add(&amp;l, 0, &quot;张一安&quot;);
+    add(&amp;l, 1, &quot;李二同&quot;);
+    print_all_data(&amp;l);
+
+    add(&amp;l, 1, &quot;林三玲&quot;);
+    if (is_empty(&amp;l))
+        printf(&quot;true\n&quot;);
+    else 
+        printf(&quot;false\n&quot;);
+    print_all_data(&amp;l);
+
+    set(&amp;l, 0, &quot;王四刚&quot;);
+    print_all_data(&amp;l);
+
+    remove_node(&amp;l, 1);
+    print_all_data(&amp;l);
+    destroy(&amp;l);
+    return 0;
+}
+</code></pre>
+<h3 id="main-c-2"><a href="#main-c-2" class="headerlink" title="*main.c"></a>*main.c</h3><p>这是我做这道题实际用的方法，用数字映射人名，也放在这</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &quot;seqlist_eg.h&quot;
+
+//映射：数字 -&gt; 人名
+const char* num2name(int id) {
+    static const char* names[] = {&quot;&quot;, &quot;Zhang&quot;, &quot;Li&quot;, &quot;Lin&quot;, &quot;Wang&quot;};
+    if (id &gt;= 1 &amp;&amp; id &lt;= 4) return names[id];
+    return &quot;?&quot;;
+}
+
+void print_classroom(LList *list) {
+    printf(&quot;The people in classroom: &quot;);
+    for (size_t i = 0; i &lt; size(list); ++i) {
+        printf(&quot;%s &quot;, num2name(get(list, i)));
+    }
+    printf(&quot;\n&quot;);
+}
+
+int main() {
+    LList list;
+    initialize(&amp;list);
+    // ① 张一安、李二同依次坐到座位 0、1
+    add(&amp;list, 0, 1);
+    add(&amp;list, 1, 2);
+    print_classroom(&amp;list);
+    // ② 林三玲插入到座位 1
+    add(&amp;list, 1, 3);
+    print_classroom(&amp;list);
+    // ③ 王四刚替代座位 0 的张一安
+    set(&amp;list, 0, 4);
+    print_classroom(&amp;list);
+    // ④ 林三玲离开
+    remove_node(&amp;list, 1);
+    print_classroom(&amp;list);
+
+    destroy(&amp;list);
+    return 0;
+}
+</code></pre>
+<h2 id="程序2-6-2-7"><a href="#程序2-6-2-7" class="headerlink" title="程序2.6-2.7"></a>程序2.6-2.7</h2><p>刚才那题的c++版本</p>
+<h3 id="linear-list-cpp-h"><a href="#linear-list-cpp-h" class="headerlink" title="linear_list_cpp.h"></a>linear_list_cpp.h</h3><pre><code class="language-cpp">#ifndef CHAPTER_2_LINEAR_LIST_CPP_H
+#define CHAPTER_2_LINEAR_LIST_CPP_H
+
+#include &lt;cassert&gt;
+#include &lt;cstddef&gt;
+
+template&lt;typename ElementType&gt; 
+class Linear_List {
+protected:
+    size_t _length = 0;
+public:
+    Linear_List(){}
+    ~Linear_List(){}
+
+    size_t size() const {
+        return _length;
+    }
+    bool is_empty() const {
+        return _length == 0;
+    }
+
+    virtual void clear_all_data() = 0;
+    virtual ElementType get(size_t idx) const = 0;
+    virtual void set(size_t idx, ElementType d) = 0;
+    virtual void add(size_t idx, ElementType d) = 0;
+    virtual ElementType remove_node(size_t idx) = 0;
+    virtual int index_of(ElementType key) const = 0;
+};
+
+
+template&lt;typename ElementType&gt;
+class SeqList : public Linear_List&lt;ElementType&gt; {
+private:
+    ElementType *_data = nullptr;
+    size_t _capacity = 0;
+public:
+    SeqList(size_t size = 32) {
+        _data = new ElementType[size];
+        _capacity = size;
+    }
+    ~SeqList() {
+        delete [] _data;
+    }
+
+    void clear_all_data() {
+        this-&gt;_length = 0;
+    }
+
+    ElementType get(size_t idx) const {
+        assert(idx &lt; this-&gt;_length);
+        return _data[idx];
+    }
+
+    void set(size_t idx, ElementType d) {
+        assert(idx &lt; this-&gt;_length);
+        _data[idx] = d;
+    }
+
+    void add(size_t idx, ElementType d) {
+        assert(_data != NULL &amp;&amp; idx &lt;= this-&gt;_length);
+        ElementType *temp = _data;
+        if (_capacity &lt; this-&gt;_length + 1) {
+            _capacity *= 2;
+            temp = new ElementType[_capacity];
+            /* new完会抛异常，所以我并不理解这个检查的意义,这里决定删掉 (而且用的是 NULL 还不是 nullptr...
+            if (temp == NULL) {
+                fprintf(stderr, &quot;not enough memory! \n&quot;);
+                exit(1);
+            }
+            */
+            for(size_t i = 0; i &lt; idx; ++i) {
+                temp[i] = _data[i];
+            }
+        }
+        for(size_t i = this-&gt;_length; i &gt; idx; --i) {
+            temp[i] = _data[i - 1];
+        }
+        temp[idx] = d;
+        if(temp != _data) {
+            delete [] _data;
+            _data = temp;
+        }
+        ++this-&gt;_length;
+    }
+
+    ElementType remove_node(size_t idx) {
+        assert(idx &lt; this-&gt;_length);
+        ElementType removed = _data[idx];
+        for (size_t i = idx + 1; i &lt; this-&gt;_length; ++i) {
+            _data[i - 1] = _data[i];
+        }
+        --this-&gt;_length;
+        return removed;
+    }
+
+    int index_of(ElementType key) const {
+        for (size_t i = 0; i &lt; this-&gt;_length; ++i) {
+            if (_data[i] == key) return i;
+        }
+        return -1;
+    }
+};
+#endif
+</code></pre>
+<h3 id="main-cpp"><a href="#main-cpp" class="headerlink" title="main.cpp"></a>main.cpp</h3><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &quot;linear_list_cpp.h&quot;
+
+template&lt;typename ElementType&gt;
+void print_all_data(const SeqList&lt;ElementType&gt; &amp;l) {
+    for (size_t i = 0; i &lt; l.size(); ++i) {
+        std::cout &lt;&lt; l.get(i) &lt;&lt; std::endl;
+    }
+    std::cout &lt;&lt; &quot;*******************\n&quot;;
+}
+
+int main() {
+    SeqList&lt;std::string&gt; l;
+    l.add(0, &quot;张一安&quot;);
+    l.add(1, &quot;李二同&quot;);
+    print_all_data(l);
+
+    l.add(1, &quot;林三玲&quot;);
+    if(l.is_empty())
+        std::cout &lt;&lt; &quot;true\n&quot;;
+    else
+        std::cout &lt;&lt; &quot;false\n&quot;;
+    print_all_data(l);
+
+    l.set(0, &quot;王四刚&quot;);
+    print_all_data(l);
+
+    l.remove_node(1);
+    print_all_data(l);
+    return 0;
+}
+</code></pre>
+<h2 id="程序2-8-2-11"><a href="#程序2-8-2-11" class="headerlink" title="程序2.8-2.11"></a>程序2.8-2.11</h2><p>单链表的实现</p>
+<h3 id="linked-list-h"><a href="#linked-list-h" class="headerlink" title="linked_list.h"></a>linked_list.h</h3><pre><code class="language-c">#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdbool.h&gt;
+
+typedef int ElementType;
+typedef struct Linear_List LList;
+
+struct Node {
+    ElementType _data;
+    struct Node *_next;
+};
+
+struct Linear_List {
+    size_t _length;
+    struct Node *_head;
+    struct Node *_tail;
+};
+
+void initialize(LList *list);
+void destroy(LList *list);
+void clear_all_data(LList *list);
+bool is_empty(LList *list);
+size_t size(LList *list);
+ElementType get(LList *list, size_t idx);
+void set(LList *list, size_t idx, ElementType d);
+void add(LList *list, size_t idx, ElementType d);
+ElementType remove_node(LList *list, size_t idx);
+int index_of(LList *list, ElementType key);
+void push_front(LList *list, ElementType d);
+void push_back(LList *list, ElementType d);
+ElementType pop_front(LList *list);
+ElementType pop_back(LList *list);
+
+#endif
+</code></pre>
+<h3 id="linked-list-c"><a href="#linked-list-c" class="headerlink" title="linked_list.c"></a>linked_list.c</h3><pre><code class="language-c">#include &lt;stdlib.h&gt;
+#include &lt;assert.h&gt;
+#include &quot;linked_list.h&quot;
+
+void initialize(LList *list) {
+    list-&gt;_head = NULL;
+    list-&gt;_tail = NULL;
+    list-&gt;_length = 0;
+}
+
+void destroy(LList *list) {
+    clear_all_data(list);
+}
+
+//头指针往后指，指一个删一个，直到删完
+void clear_all_data(LList *list) {
+    assert(list != NULL);
+    if (list-&gt;_head == NULL) return;
+    struct Node *t = list-&gt;_head;
+    while (t != NULL) {
+        list-&gt;_head = t-&gt;_next;
+        free(t);
+        t = list-&gt;_head;
+    }
+    list-&gt;_head = NULL;
+    list-&gt;_tail = NULL;
+    list-&gt;_length = 0;
+}
+
+bool is_empty(LList *list) {
+    assert(list != NULL);
+    return list-&gt;_length == 0;
+}
+
+size_t size(LList *list) {
+    assert(list != NULL);
+    return list-&gt;_length;
+}
+
+struct Node *_get_node(LList *list, size_t idx) {
+    assert(list != NULL);
+    if (idx &gt;= list-&gt;_length) return NULL;
+    size_t i = 0;
+    struct Node *t = list-&gt;_head;
+    while (i &lt; idx) {
+        t = t-&gt;_next;
+        ++i;
+    }
+    return t;
+}
+
+ElementType get(LList *list, size_t idx) {
+    assert(list != NULL);
+    struct Node *n = _get_node(list, idx);
+    assert(n != NULL);
+    return n-&gt;_data;
+}
+
+void set(LList *list, size_t idx, ElementType d) {
+    assert(list != NULL);
+    struct Node *n = _get_node(list, idx);
+    assert(n != NULL);
+    n-&gt;_data = d;
+}
+
+void add(LList *list, size_t idx, ElementType d) {
+    assert(list != NULL);
+    /* 实话说这个特判也没看懂，_length = 0 时 idx 也只能 = 0，那有下面的分支足够了呀
+    if (list-&gt;_length == 0) {
+        push_front(list, d);
+        return;
+    }
+    */
+    assert (idx &lt;= list-&gt;_length);
+    if (idx == 0) {
+        push_front(list, d);
+    }
+    else if (idx == list-&gt;_length) {
+        push_back(list, d);
+    }
+    else {
+        struct Node *pre = _get_node(list, idx - 1);                 //先找到前一个结点再插
+        struct Node *new_node = (struct Node*) malloc(sizeof(struct Node));
+        new_node-&gt;_data = d;
+        new_node-&gt;_next = pre-&gt;_next;
+        pre-&gt;_next = new_node;
+        ++list-&gt;_length;
+    }
+}
+
+ElementType remove_node(LList *list, size_t idx) {
+    assert(list != NULL &amp;&amp; idx &lt; list-&gt;_length);
+    ElementType removed;
+    if (idx == 0) {
+        removed = list-&gt;_head-&gt;_data;
+        pop_front(list);
+    }
+    else if (idx == list-&gt;_length - 1) {
+        removed = list-&gt;_tail-&gt;_data;
+        pop_back(list);
+    }
+    else {
+        struct Node *pre = _get_node(list, idx - 1);
+        removed = pre-&gt;_next-&gt;_data;
+        struct Node *cur = pre-&gt;_next;
+        pre-&gt;_next = cur-&gt;_next;
+        free(cur);
+        --list-&gt;_length;
+    }
+    return removed;
+}
+
+int index_of(LList *list, ElementType key) {
+    assert(list != NULL);
+    struct Node *t = list-&gt;_head;
+    for (size_t i = 0; i &lt; list-&gt;_length; ++i, t = t-&gt;_next) {
+        if (t-&gt;_data == key) return i;
+    }
+    return -1;
+}
+
+void push_front(LList *list, ElementType d) {
+    assert(list != NULL);
+    struct Node *new_node = (struct Node*) malloc(sizeof(struct Node));
+    assert(new_node != NULL);
+    new_node-&gt;_data = d;
+    new_node-&gt;_next = NULL;
+    if (list-&gt;_head == NULL) {
+        list-&gt;_head = list-&gt;_tail = new_node;
+    }
+    else {
+        new_node-&gt;_next = list-&gt;_head;
+        list-&gt;_head = new_node;
+    }
+    ++list-&gt;_length;
+}
+
+void push_back(LList *list, ElementType d) {
+    assert(list != NULL);
+    struct Node *new_node = (struct Node*) malloc(sizeof(struct Node));
+    assert(new_node != NULL);
+    new_node-&gt;_data = d;
+    new_node-&gt;_next = NULL;
+    if (list-&gt;_tail == NULL) {
+        list-&gt;_head = list-&gt;_tail = new_node;
+    }
+    else {
+        list-&gt;_tail-&gt;_next = new_node;
+        list-&gt;_tail = new_node;
+    }
+    ++list-&gt;_length;
+}
+
+ElementType pop_front(LList *list) {
+    assert(list != NULL);
+    assert(list-&gt;_length &gt; 0);
+    //if (list-&gt;_length == 0) return -1;
+    struct Node *t = list-&gt;_head;
+    ElementType removed = t-&gt;_data;
+    if (list-&gt;_length == 1) {                //只有一个点则置空
+        free(t);
+        list-&gt;_head = list-&gt;_tail = NULL;
+    }
+    else {
+        list-&gt;_head = t-&gt;_next;
+        free(t);
+    }
+    --list-&gt;_length;
+    return removed;
+}
+
+ElementType pop_back(LList *list) {
+    assert(list != NULL);
+    assert(list-&gt;_length &gt; 0);
+    //if (list-&gt;_length == 0) return -1;
+    struct Node *t = list-&gt;_tail;
+    ElementType removed = t-&gt;_data;
+    if (list-&gt;_length == 1) {
+        free(t);
+        list-&gt;_head = list-&gt;_tail = NULL;
+    }
+    else {
+        struct Node *pre = _get_node(list, list-&gt;_length - 2);      //找倒数第二个点
+        pre-&gt;_next = NULL;
+        free(list-&gt;_tail);
+        list-&gt;_tail = pre;
+    }
+    --list-&gt;_length;
+    return removed;
+}
+</code></pre>
+<h3 id="main-c-3"><a href="#main-c-3" class="headerlink" title="main.c"></a>main.c</h3><pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &quot;linked_list.h&quot;
+
+void print_all(LList *list) {
+    struct Node *t = list-&gt;_head;
+    printf(&quot;[&quot;);
+    while (t != NULL) {
+        printf(&quot;%d&quot;, t-&gt;_data);
+        if (t-&gt;_next != NULL) printf(&quot;, &quot;);
+        t = t-&gt;_next;
+    }
+    printf(&quot;]&quot;);
+}
+
+int main() {
+    LList list;
+
+    // ==================== 1. 初始状态 ====================
+    initialize(&amp;list);
+    printf(&quot;is_empty = %d\n&quot;, is_empty(&amp;list));
+    printf(&quot;size = %zu\n&quot;, size(&amp;list));
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\n&quot;);
+
+    // ==================== 2. push_back ====================
+    push_back(&amp;list, 1);
+    push_back(&amp;list, 2);
+    push_back(&amp;list, 3);
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\nsize = %zu\n&quot;, size(&amp;list));
+
+    // ==================== 3. push_front ====================
+    push_front(&amp;list, 0);
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\nsize = %zu\n&quot;, size(&amp;list));
+
+    // ==================== 4. get / set ====================
+    printf(&quot;get(0) = %d\n&quot;, get(&amp;list, 0));
+    printf(&quot;get(3) = %d\n&quot;, get(&amp;list, 3));
+    set(&amp;list, 0, 100);
+    printf(&quot;set(0, 100) 后 get(0) = %d\n&quot;, get(&amp;list, 0));
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\n&quot;);
+
+    // ==================== 5. add 中间插入 ====================
+    add(&amp;list, 2, 99);
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\nsize = %zu\n&quot;, size(&amp;list));
+
+    // ==================== 6. add 头部插入 ====================
+    add(&amp;list, 0, 50);
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\n&quot;);
+
+    // ==================== 7. add 尾部插入 ====================
+    add(&amp;list, size(&amp;list), 200);
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\n&quot;);
+
+    // ==================== 8. remove_node 中间删除 ====================
+    ElementType r = remove_node(&amp;list, 2);
+    printf(&quot;removed = %d\n&quot;, r);
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\nsize = %zu\n&quot;, size(&amp;list));
+
+    // ==================== 9. remove_node 删除头部 ====================
+    r = remove_node(&amp;list, 0);
+    printf(&quot;removed = %d\n&quot;, r);
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\n&quot;);
+
+    // ==================== 10. remove_node 删除尾部 ====================
+    r = remove_node(&amp;list, size(&amp;list) - 1);
+    printf(&quot;removed = %d\n&quot;, r);
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\n&quot;);
+
+    // ==================== 11. pop_front / pop_back ====================
+    printf(&quot;pop_front = %d\n&quot;, pop_front(&amp;list));
+    printf(&quot;pop_back  = %d\n&quot;, pop_back(&amp;list));
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\nsize = %zu\n&quot;, size(&amp;list));
+
+    // ==================== 12. index_of ====================
+    printf(&quot;index_of(2)  = %d\n&quot;, index_of(&amp;list, 2));
+    printf(&quot;index_of(99) = %d\n&quot;, index_of(&amp;list, 99));
+
+    // ==================== 13. clear_all_data ====================
+    clear_all_data(&amp;list);
+    printf(&quot;is_empty = %d\n&quot;, is_empty(&amp;list));
+    printf(&quot;size = %zu\n&quot;, size(&amp;list));
+
+    // ==================== 14. 清空后还能用吗 ====================
+    push_back(&amp;list, 7);
+    push_back(&amp;list, 8);
+    printf(&quot;list = &quot;);
+    print_all(&amp;list);
+    printf(&quot;\nsize = %zu\n&quot;, size(&amp;list));
+
+    // ==================== 15. destroy ====================
+    destroy(&amp;list);
+    printf(&quot;destroy finished\n&quot;);
+
+    return 0;
+}
+</code></pre>
+<h2 id="程序2-12"><a href="#程序2-12" class="headerlink" title="程序2.12"></a>程序2.12</h2><p>单链表的使用实例 (题目见书 p38)</p>
+<h3 id="linked-list-h-1"><a href="#linked-list-h-1" class="headerlink" title="linked_list.h"></a>linked_list.h</h3><p>把</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdbool.h&gt;
+
+typedef int ElementType;
+typedef struct Linear_List LList;
+</code></pre>
+<p>改成</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdbool.h&gt;
+
+typedef char* ElementType;
+typedef struct Linear_List LList;
+</code></pre>
+<p>其他同上</p>
+<h3 id="linked-list-c-1"><a href="#linked-list-c-1" class="headerlink" title="linked_list.c"></a>linked_list.c</h3><p>同上</p>
+<h3 id="test-linked-list-c"><a href="#test-linked-list-c" class="headerlink" title="test_linked_list.c"></a>test_linked_list.c</h3><pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &quot;linked_list.h&quot;
+
+void print_all_data(LList *list) {
+    struct Node *t = list-&gt;_head;
+    while (t != NULL) {
+        printf(&quot;%s\n&quot;, t-&gt;_data);
+        t = t-&gt;_next;
+    }
+    printf(&quot;******************* \n&quot;);
+}
+
+int main() {
+    LList l;
+    initialize(&amp;l);
+
+    push_back(&amp;l, &quot;Zhang&quot;);
+    push_back(&amp;l, &quot;Li&quot;);
+    print_all_data(&amp;l);
+
+    add(&amp;l, 2, &quot;Lin&quot;);
+    if (is_empty(&amp;l)) 
+        printf(&quot;true \n&quot;);
+    else
+        printf(&quot;false \n&quot;);
+    print_all_data(&amp;l);
+
+    set(&amp;l, 0, &quot;Wang&quot;);
+    print_all_data(&amp;l);
+
+    remove_node(&amp;l, 1);
+    print_all_data(&amp;l);
+    destroy(&amp;l);
+
+    return 0;
+}
+</code></pre>
+<h2 id="程序2-13-2-14"><a href="#程序2-13-2-14" class="headerlink" title="程序2.13-2.14"></a>程序2.13-2.14</h2><p>刚才那题的c++版本</p>
+<h3 id="linear-list-cpp-h-1"><a href="#linear-list-cpp-h-1" class="headerlink" title="linear_list_cpp.h"></a>linear_list_cpp.h</h3><pre><code class="language-cpp">#ifndef CHAPTER_2_C_LINEAR_LIST_H
+#define CHAPTER_2_C_LINEAR_LIST_H
+
+#include &lt;cassert&gt;
+#include &lt;cstddef&gt;
+
+template&lt;typename ElementType&gt;
+class Linear_List {
+protected:
+    size_t _length = 0;
+public:
+    Linear_List() {}
+    ~Linear_List() {}
+
+    size_t size() const {
+        return _length;
+    }
+
+    bool is_empty() const {
+        return _length == 0;
+    }
+
+    virtual void clear_all_data() = 0;
+    virtual ElementType get(size_t idx) const = 0;
+    virtual void set(size_t idx, ElementType d) = 0;
+    virtual void add(size_t idx, ElementType d) = 0;
+    virtual ElementType remove_node(size_t idx) = 0;
+    virtual int index_of(ElementType key) const = 0;
+};
+
+template&lt;typename ElementType&gt;
+class LinkedList : public Linear_List&lt;ElementType&gt; {
+private:
+    struct Node {
+        ElementType _data;
+        Node *_next = nullptr;
+    };
+    Node *_head = nullptr;
+    Node *_tail = nullptr;
+
+    Node *_get_node(size_t idx) const {
+        assert(idx &lt; this-&gt;_length);
+        size_t i = 0;
+        Node *t = _head;
+        while (i &lt; idx) {
+            t = t-&gt;_next;
+            ++i;
+        }   
+        return t;
+    }
+    
+public:
+    LinkedList() {};
+    ~LinkedList() {
+        clear_all_data();
+    }
+
+    void clear_all_data() {
+        while (_head != nullptr) {
+            Node *t = _head-&gt;_next;
+            delete _head;
+            _head = t;
+        }
+        _head = _tail = nullptr;
+        this-&gt;_length = 0;
+    }
+
+    ElementType get(size_t idx) const {
+        assert(idx &lt; this-&gt;_length);
+        Node *t = _get_node(idx);
+        return t-&gt;_data;
+    }
+
+    void set(size_t idx, ElementType d) {
+        assert(idx &lt; this-&gt;_length);
+        Node *t = _get_node(idx);
+        t-&gt;_data = d;
+    }
+
+    void add(size_t idx, ElementType d) {
+        assert(idx &lt;= this-&gt;_length);
+        if (idx == this-&gt;_length) {
+            push_back(d);
+            return;
+        }
+        if (idx == 0) {
+            push_front(d);
+            return;
+        }
+        Node *pre = _get_node(idx - 1);
+        Node *now = new Node;
+        now-&gt;_data = d;
+        now-&gt;_next = pre-&gt;_next;
+        pre-&gt;_next = now;
+        ++this-&gt;_length;
+    }
+
+    int index_of(ElementType key) const {
+        Node *t = _head;
+        for (size_t i = 0; i &lt; this-&gt;_length; ++i, t = t-&gt;_next) {
+            if (t-&gt;_data == key) return i;
+        }
+        return -1;
+    }
+
+    ElementType remove_node (size_t idx) {
+        assert(idx &lt; this-&gt;_length);
+        if (idx == 0) {
+            ElementType removed = _head-&gt;_data;
+            pop_front();
+            return removed;
+        }
+        if (idx == this-&gt;_length - 1) {
+            ElementType removed = _tail-&gt;_data;
+            pop_back();
+            return removed;
+        }
+        Node *pre = _get_node(idx - 1);
+        Node *cur = pre-&gt;_next;
+        pre-&gt;_next = cur-&gt;_next;
+        ElementType removed = cur-&gt;_data;
+        delete cur;
+        --this-&gt;_length;
+        return removed;
+    }
+
+    void push_front(ElementType d) {
+        Node *t = new Node;
+        t-&gt;_data = d;
+        if (_head == nullptr) {
+            _tail = _head = t;
+        }
+        else {
+            t-&gt;_next = _head;
+            _head = t;
+        }
+        ++this-&gt;_length;
+    }
+
+    void push_back(ElementType d) {
+        Node *t = new Node;
+        t-&gt;_data = d;
+        if (_tail == nullptr) {
+            _head = _tail = t;
+        }
+        else {
+            _tail-&gt;_next = t;
+            _tail = t;
+        }
+        ++this-&gt;_length;
+    }
+
+    void pop_front() {
+        assert(_head != nullptr);
+        if (_head == _tail) {
+            delete _head;
+            _head = _tail = nullptr;
+        }
+        else {
+            Node *t = _head-&gt;_next;
+            delete _head;
+            _head = t;
+        }
+        --this-&gt;_length;
+    }
+
+    void pop_back() {
+        assert(_head != nullptr);
+        if (_head == _tail) {
+            delete _head;
+            _head = _tail = nullptr;
+            --this-&gt;_length;
+            return;
+        }
+        else {
+            Node *t = _get_node(this-&gt;_length - 2);
+            t-&gt;_next = nullptr;
+            delete _tail;
+            _tail = t;
+            --this-&gt;_length;
+        }
+    }
+};
+#endif
+</code></pre>
+<h3 id="test-list-cpp"><a href="#test-list-cpp" class="headerlink" title="test_list.cpp"></a>test_list.cpp</h3><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &quot;linear_list_cpp.h&quot;
+
+template&lt;typename ElementType&gt;
+void print_all_data(ElementType &amp;l) {
+    for (size_t i = 0; i &lt; l.size(); ++i) {
+        std::cout &lt;&lt; l.get(i) &lt;&lt; &quot;\n&quot;;
+    }
+    std::cout &lt;&lt; &quot;******************* \n&quot;;
+}
+
+int main() {
+    LinkedList&lt;std::string&gt; l;
+    l.add(0, &quot;张一安&quot;);
+    l.add(1, &quot;李二同&quot;);
+
+    print_all_data(l);
+
+    l.add(2, &quot;林三玲&quot;);
+    if (l.is_empty()) { std::cout &lt;&lt; &quot;true\n&quot;; }
+    else { std::cout &lt;&lt; &quot;false\n&quot;; }
+    print_all_data(l);
+    l.set(0, &quot;王四刚&quot;);
+    print_all_data(l);
+
+    l.remove_node(1);
+    print_all_data(l);
+
+    return 0;
+}
+</code></pre>
+<h2 id="程序2-15-2-16"><a href="#程序2-15-2-16" class="headerlink" title="程序2.15-2.16"></a>程序2.15-2.16</h2><p>双向链表节点定义</p>
+<pre><code class="language-c">struct Node {
+  ElementType _data;
+  struct Node *_next;
+  struct Node *_prev;
+};
+</code></pre>
+<pre><code class="language-cpp">template&lt;typename T&gt;
+struct Node {
+    T _data;
+    Node* _next = nullptr;  
+    Node* _prev = nullptr;  
+};
+</code></pre>
+<h3 id="dlist-cpp"><a href="#dlist-cpp" class="headerlink" title="dlist.cpp"></a>dlist.cpp</h3><p>c版本我没展开写，这是完整的c++版本</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+#include &lt;cstddef&gt;
+
+template&lt;typename T&gt;
+struct Node {
+    T _data;
+    Node* _next = nullptr;  
+    Node* _prev = nullptr;  
+    
+    Node(T d) : _data(d) {}
+};
+
+template&lt;typename T&gt;
+class DoublyLinkedList {
+private:
+    Node&lt;T&gt; *_head; 
+    Node&lt;T&gt; *_tail; 
+    size_t _length;
+
+public:
+    DoublyLinkedList() : _head(nullptr), _tail(nullptr), _length(0) {}
+
+    ~DoublyLinkedList() {
+        clear();
+    }
+
+    void clear() {
+        Node&lt;T&gt; *curr = _head;
+        while (curr != nullptr) {
+            Node&lt;T&gt; *next = curr-&gt;_next;
+            delete curr;
+            curr = next;
+        }
+        _head = _tail = nullptr;
+        _length = 0;
+    }
+
+    size_t size() const { return _length; }
+
+    bool is_empty() const { return _length == 0; }
+
+    void push_back(T d) {
+        Node&lt;T&gt; *new_node = new Node&lt;T&gt;(d);
+        if (_tail == nullptr) {
+            _head = _tail = new_node;
+        } 
+        else {
+            new_node-&gt;_prev = _tail;
+            _tail-&gt;_next = new_node;
+            _tail = new_node;
+        }
+        ++_length;
+    }
+
+    void push_front(T d) {
+        Node&lt;T&gt; *new_node = new Node&lt;T&gt;(d);
+        if (_head == nullptr) {
+            _head = _tail = new_node;
+        } else {
+            new_node-&gt;_next = _head;
+            _head-&gt;_prev = new_node;
+            _head = new_node;
+        }
+        ++_length;
+    }
+
+    void insert_before(Node&lt;T&gt; *p, T d) {
+        if (p == nullptr) return;
+        
+        Node&lt;T&gt; *new_node = new Node&lt;T&gt;(d);
+        
+        // 1. 先把新节点的两个指针接好
+        new_node-&gt;_next = p;
+        new_node-&gt;_prev = p-&gt;_prev;
+        
+        // 2. 处理 p 原来的前驱节点（如果有的话）
+        if (p-&gt;_prev != nullptr) {
+            p-&gt;_prev-&gt;_next = new_node;
+        } else {
+            // 如果 p 是头节点，说明新节点成了新的头节点
+            _head = new_node;
+        }
+        
+        // 3. 处理 p 的前驱指针
+        p-&gt;_prev = new_node;
+        
+        ++_length;
+    }
+
+    void remove(Node&lt;T&gt; *p) {
+        if (p == nullptr) return;
+
+        // 1. 处理前驱
+        if (p-&gt;_prev != nullptr) {
+            p-&gt;_prev-&gt;_next = p-&gt;_next;
+        } else {
+            _head = p-&gt;_next; // 删除的是头节点
+        }
+
+        // 2. 处理后继
+        if (p-&gt;_next != nullptr) {
+            p-&gt;_next-&gt;_prev = p-&gt;_prev;
+        } else {
+            _tail = p-&gt;_prev; // 删除的是尾节点
+        }
+
+        // 3. 释放自身
+        delete p;
+        --_length;
+    }
+
+    // 正向打印
+    void print_forward() {
+        Node&lt;T&gt; *curr = _head;
+        std::cout &lt;&lt; &quot;正向: [&quot;;
+        while (curr != nullptr) {
+            std::cout &lt;&lt; curr-&gt;_data;
+            if (curr-&gt;_next != nullptr) std::cout &lt;&lt; &quot;, &quot;;
+            curr = curr-&gt;_next;
+        }
+        std::cout &lt;&lt; &quot;]\n&quot;;
+    }
+
+    // 反向打印
+    void print_backward() {
+        Node&lt;T&gt; *curr = _tail;
+        std::cout &lt;&lt; &quot;反向: [&quot;;
+        while (curr != nullptr) {
+            std::cout &lt;&lt; curr-&gt;_data;
+            if (curr-&gt;_prev != nullptr) std::cout &lt;&lt; &quot;, &quot;;
+            curr = curr-&gt;_prev;
+        }
+        std::cout &lt;&lt; &quot;]\n&quot;;
+    }
+    
+    Node&lt;T&gt; *get_node(size_t idx) {
+        assert(idx &lt; _length);
+        Node&lt;T&gt;* curr = _head;
+        for (size_t i = 0; i &lt; idx; ++i) curr = curr-&gt;_next;
+        return curr;
+    }
+};
+
+int main() {
+    DoublyLinkedList&lt;std::string&gt; list;
+    
+    list.push_back(&quot;A&quot;);
+    list.push_back(&quot;B&quot;);
+    list.push_back(&quot;C&quot;);
+    list.print_forward();  
+    list.print_backward(); 
+
+    std::cout &lt;&lt; &quot;--- 测试 insert_before ---\n&quot;;
+    Node&lt;std::string&gt;* p = list.get_node(1);
+    list.insert_before(p, &quot;X&quot;); 
+    list.print_forward(); 
+    list.print_backward();
+
+    std::cout &lt;&lt; &quot;--- 测试 remove ---\n&quot;;
+    p = list.get_node(2);
+    list.remove(p);
+    list.print_forward();
+    list.print_backward();
+
+    return 0;
+} 
+</code></pre>
+<h2 id="编译运行命令"><a href="#编译运行命令" class="headerlink" title="编译运行命令"></a>编译运行命令</h2><p>c </p>
+<pre><code>gcc *.c -o test
+.\test
+</code></pre>
+<p> c++</p>
+<pre><code>g++ *.cpp -o test
+.\test
+</code></pre>
+<p> 注：把所有要一起编译的文件都放在同一个目录下再执行</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>(待补充)</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 linda@modico.net </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>课内学习 之 数据结构2</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">5.3k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="小珠">小珠</a></p>
+    <p><span class="copy-title">发布时间:</span>2026-10-03, 14:21:15</p>
+    <p><span class="copy-title">最后更新:</span>2026-10-18, 15:45:33</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2026/10/03/DataStructure2/" title="课内学习 之 数据结构2">https://xiaozhu-jmxs.github.io/2026/10/03/DataStructure2/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2026 小珠
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 18px 3px 15px 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        background: url("/img/article-bg.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>
